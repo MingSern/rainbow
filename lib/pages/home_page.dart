@@ -1,7 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:rainbow/utils/color_util.dart';
 import 'package:rainbow/widgets/header_text.dart';
 
 /// The first page where users are going to see
@@ -14,29 +13,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _random = Random();
+  final _colorUtil = ColorUtil();
   Color _backgroundColor = Colors.white;
   bool _isBright = true;
 
   void _onTap() {
     HapticFeedback.mediumImpact();
-    _backgroundColor = _generateColor();
-    _isBright = _determineBrightness(_backgroundColor);
+    _backgroundColor = _colorUtil.generate();
+    _isBright = _colorUtil.checkBrightness(_backgroundColor);
     setState(() => {});
-  }
-
-  Color _generateColor() {
-    final value = _random.nextDouble();
-    final hexCode = (value * 0xFFFFFF).toInt();
-
-    return Color(hexCode).withOpacity(1.0);
-  }
-
-  bool _determineBrightness(Color color) {
-    const brightnessThreshold = 0.5;
-    final isbrighter = color.computeLuminance() > brightnessThreshold;
-
-    return isbrighter;
   }
 
   @override
