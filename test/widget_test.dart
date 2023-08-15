@@ -14,4 +14,22 @@ void main() {
 
     expect(textFinder, findsOneWidget);
   });
+
+  testWidgets('Home page able to tap and change color', (tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: HomePage(),
+      ),
+    );
+
+    final type = find.byType(Scaffold);
+    final scaffold = tester.element(type);
+
+    final initialColor = Theme.of(scaffold).scaffoldBackgroundColor;
+    await tester.tap(type);
+    await tester.pump();
+    final finalColor = Theme.of(scaffold).scaffoldBackgroundColor;
+
+    expect(initialColor, isNot(finalColor));
+  });
 }
