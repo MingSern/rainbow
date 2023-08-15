@@ -1,12 +1,22 @@
-# flutter_project_template
-📖 Template for flutter projects using solid_lints, CI for tests and analysis.
+# Rainbow
 
-- Uses latest stable flutter
-- Repo name as your project name
-- Organization from your profile email address or default
+### Requirements
 
-# Usage
-1. Press "Use this template" on the menu.
-2. Fill Github form with your new repo name and press "Create repository from template"
-3. Wait for it to be created and set up action is complete. In a couple of minutes, you'll see the flutter project created in your repo once Github Actions are complete.
-4. Clone and code.
+- [x] "Hello there" in the middle of the screen.
+- [x] Generate random background color when screen tapped.
+
+### Additional features
+
+- [x] Text brightness theme change according to the background color.
+- [x] System status bar and navigation bar theme change according to the background color.
+- [x] Vibrate device when screen on tapped.
+
+### Prerequisite
+
+1. Install Flutter SDK and follow the instructions [here](https://docs.flutter.dev/get-started/install)
+
+### To run
+
+1. Clone this repository.
+2. Run `flutter pub get` in the root directory to get all the project dependencies.
+3. Finally run `flutter run` on your device/emulator.
