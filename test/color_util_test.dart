@@ -4,21 +4,17 @@ import 'package:rainbow/utils/color_util.dart';
 
 void main() {
   testWidgets('Generating random color', (tester) async {
-    final colorUtil = ColorUtil();
+    final colorA = ColorUtil.generate();
 
-    final colorA = colorUtil.generate();
-
-    final colorB = colorUtil.generate();
+    final colorB = ColorUtil.generate();
 
     expect(colorA, isNot(colorB));
   });
 
-  testWidgets('Checking brighness of a color', (tester) async {
-    final colorUtil = ColorUtil();
+  testWidgets('Checking brightness of a color', (tester) async {
+    final brightnessA = ColorUtil.checkBrightness(Colors.black);
 
-    final brightnessA = colorUtil.checkBrightness(Colors.black);
-
-    final brightnessB = colorUtil.checkBrightness(Colors.white);
+    final brightnessB = ColorUtil.checkBrightness(Colors.white);
 
     expect(brightnessA, false);
 
