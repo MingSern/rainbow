@@ -36,9 +36,9 @@ jobs:
         if: steps.check_files.outputs.files_exists == 'true'
         run: |
           dirs_to_analyse=""
-          if [ -d lib ]; then dirs_to_analyse+="lib"; fi
-          if [ -d test ]; then dirs_to_analyse+="test"; fi
-          if [ -d example ]; then dirs_to_analyse+="example"; fi
+          if [ -d lib ]; then dirs_to_analyse+=" lib"; fi
+          if [ -d test ]; then dirs_to_analyse+=" test"; fi
+          if [ -d example ]; then dirs_to_analyse+=" example"; fi
 
           if [ dirs_to_analyse != "" ]
           then
@@ -53,7 +53,7 @@ jobs:
               $dirs_to_analyse \
               --fatal-unused
             dart run dart_code_metrics:metrics \
-              check-unused-code \ 
+              check-unused-code \
               $dirs_to_analyse \
               --fatal-unused
           fi
