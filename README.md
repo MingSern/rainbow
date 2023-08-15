@@ -4,6 +4,8 @@
 
 - [x] "Hello there" in the middle of the screen.
 - [x] Generate random background color when screen tapped.
+- [x] No external libraries for color generation.
+- [x] Use solid lint.
 
 ### Additional features
 
