@@ -11,8 +11,8 @@
 
 ### Additional features
 
-- [x] Text brightness theme change according to the background color.
-- [x] System status bar and navigation bar theme change according to the background color.
+- [x] Changing text brightness theme according to the background color.
+- [x] Changing system status bar and navigation bar theme according to the background color.
 - [x] Vibrate device when screen on tapped.
 - [x] Added basic unit and widget tests.
 
