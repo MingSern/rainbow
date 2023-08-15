@@ -1,5 +1,7 @@
 # Rainbow
 
+[![style: solid](https://img.shields.io/badge/style-solid-orange)](https://pub.dev/packages/solid_lints)
+
 ### Requirements
 
 - [x] "Hello there" in the middle of the screen.
